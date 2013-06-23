@@ -1,0 +1,22 @@
+{
+  "name": "css-animation-emitter",
+  "repo": "kewah/css-animation-emitter",
+  "description": "CSS animation/transition events emitter",
+  "author": "Antoine Lehurt",
+  "version": "0.1.0",
+  "keywords": [
+    "css",
+    "transition",
+    "animation",
+    "event",
+    "emitter",
+    "trigger"
+  ],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "dist/css-animation-emitter.common.js",
+  "scripts": [
+    "dist/css-animation-emitter.common.js"
+  ]
+}
