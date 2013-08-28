@@ -3,7 +3,7 @@
 
 var _style = document.documentElement.style;
 
-var animationName = prefix({
+var animation = prefix({
   'webkitAnimationName': {
     s: 'webkitAnimationStart',
     e: 'webkitAnimationEnd',
@@ -39,9 +39,9 @@ var eventTypes = {
     'msTransition': 'MSTransitionEnd',
     'transition': 'transitionend'
   }),
-  animationstart: animationName.s,
-  animationend: animationName.e,
-  animationiteration: animationName.i
+  animationstart: animation.s,
+  animationend: animation.e,
+  animationiteration: animation.i
 };
 
 function prefix(names) {
@@ -74,7 +74,7 @@ function CSSAnimationEmitter(el) {
 var p = CSSAnimationEmitter.prototype;
 
 p.on = function(type, handler, capture) {
-  capture = capture  || false;
+  capture = capture || false;
   type = getEventType(type);
 
   this._listeners.push({
