@@ -56,17 +56,18 @@ module.exports = function(grunt) {
       options: {
         banner: banner
       }
+    },
+
+    mocha_phantomjs: {
+      all: ['test/index.html']
     }
 
   });
 
   // load plugins
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-component-build');
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  // Task which generates the component and standalone version in the `dist` directory.
+  // Generates the component and standalone version in the `dist` directory.
   grunt.registerMultiTask('build', 'Generate standalone & component versions', function() {
     var opts = this.data;
     var src = {
@@ -85,5 +86,5 @@ module.exports = function(grunt) {
   // register tasks
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('dist', ['clean', 'jshint', 'build:dist', 'uglify:dist']);
-  grunt.registerTask('test', ['dist', 'component_build']);
+  grunt.registerTask('test', ['dist', 'component_build', 'mocha_phantomjs']);
 };

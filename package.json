@@ -2,8 +2,8 @@
   "name": "css-animation-emitter",
   "version": "0.1.0",
   "description": "CSS animation/transition events emitter",
-  "author": "Antoine Lehurt <keuwah@gmail.com>",
-  "main": "dist/css-animation-emitter.js",
+  "author": "Antoine Lehurt <keuwah@gmail.com> (http://github.com/kewah)",
+  "main": "dist/css-animation-emitter.min.js",
   "scripts": {
     "test": "grunt test"
   },
@@ -29,6 +29,45 @@
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-jshint": "~0.6.0",
-    "grunt-component-build": "~0.2.8"
+    "grunt-component-build": "~0.2.8",
+    "grunt-mocha-phantomjs": "~0.2.8",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-watch": "~0.4.4"
+  },
+  "testling": {
+    "scripts": [
+      "dist/css-animation-emitter.min.js",
+      "test/css-animation-emitter-test.js"
+    ],
+    "harness": "mocha-bdd",
+    "browsers": {
+      "ie": [
+        10
+      ],
+      "chrome": [
+        24,
+        25
+      ],
+      "firefox": [
+        18,
+        19
+      ],
+      "opera": [
+        12
+      ],
+      "safari": [
+        5.1,
+        6
+      ],
+      "iphone": [
+        6
+      ],
+      "ipad": [
+        6
+      ],
+      "android-browser": [
+        4.2
+      ]
+    }
   }
 }
