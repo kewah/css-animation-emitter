@@ -6,7 +6,7 @@ var banner = '' +
   ' * <%= pkg.name %>\n' +
   ' * v<%= pkg.version %> - <%= grunt.template.today("dd/mm/yyyy") %>\n' +
   ' * http://github.com/<%= pkg.repo %>\n' +
-  ' * (c) <%= pkg.author %> - <%= pkg.license %> License\n' +
+  ' * (c) <%= pkg.author %> (@kewah) - <%= pkg.license %> License\n' +
   ' */\n';
 
 var standaloneTpl = '<%= banner %>' +

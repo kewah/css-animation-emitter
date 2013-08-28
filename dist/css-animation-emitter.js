@@ -1,8 +1,8 @@
 /*!
  * css-animation-emitter
- * v0.1.0 - 23/06/2013
+ * v0.1.0 - 01/07/2013
  * http://github.com/kewah/css-animation-emitter
- * (c) Antoine Lehurt - MIT License
+ * (c) Antoine Lehurt (@kewah) - MIT License
  */
 ;(function(window, document, undefined) { 
 
@@ -11,7 +11,7 @@
 
 var _style = document.documentElement.style;
 
-var animationName = prefix({
+var animation = prefix({
   'webkitAnimationName': {
     s: 'webkitAnimationStart',
     e: 'webkitAnimationEnd',
@@ -47,13 +47,14 @@ var eventTypes = {
     'msTransition': 'MSTransitionEnd',
     'transition': 'transitionend'
   }),
-  animationstart: animationName.s,
-  animationend: animationName.e,
-  animationiteration: animationName.i
+  animationstart: animation.s,
+  animationend: animation.e,
+  animationiteration: animation.i
 };
 
 function prefix(names) {
   for (var name in names) {
+    console.log(names[name]);
     if (undefined !== _style[name]) {
       return names[name];
     }

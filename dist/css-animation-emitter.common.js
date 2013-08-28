@@ -3,7 +3,7 @@
 
 var _style = document.documentElement.style;
 
-var animationName = prefix({
+var animation = prefix({
   'webkitAnimationName': {
     s: 'webkitAnimationStart',
     e: 'webkitAnimationEnd',
@@ -39,13 +39,14 @@ var eventTypes = {
     'msTransition': 'MSTransitionEnd',
     'transition': 'transitionend'
   }),
-  animationstart: animationName.s,
-  animationend: animationName.e,
-  animationiteration: animationName.i
+  animationstart: animation.s,
+  animationend: animation.e,
+  animationiteration: animation.i
 };
 
 function prefix(names) {
   for (var name in names) {
+    console.log(names[name]);
     if (undefined !== _style[name]) {
       return names[name];
     }
