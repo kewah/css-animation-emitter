@@ -3,7 +3,7 @@
   "repo": "kewah/css-animation-emitter",
   "description": "CSS animation/transition events emitter",
   "author": "Antoine Lehurt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "css",
     "transition",

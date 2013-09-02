@@ -1,6 +1,6 @@
 /*!
  * css-animation-emitter
- * v0.1.0 - 01/07/2013
+ * v0.1.1 - 02/09/2013
  * http://github.com/kewah/css-animation-emitter
  * (c) Antoine Lehurt (@kewah) - MIT License
  */
@@ -18,9 +18,9 @@ var animation = prefix({
     i: 'webkitAnimationIteration'
   },
   'MozAnimationName': {
-    s: 'mozanimationstart',
-    e: 'mozanimationend',
-    i: 'mozanimationiteration'
+    s: 'animationstart',
+    e: 'animationend',
+    i: 'animationiteration'
   },
   'OAnimationName': {
     s: 'oAnimationStart',
@@ -28,9 +28,9 @@ var animation = prefix({
     i: 'oAnimationIteration'
   },
   'msAnimationName': {
-    s: 'msanimationstart',
-    e: 'msanimationend',
-    i: 'msanimationiteration'
+    s: 'MSAnimationStart',
+    e: 'MSAnimationEnd',
+    i: 'MSAnimationIteration'
   },
   'animationName': {
     s: 'animationstart',
@@ -54,7 +54,6 @@ var eventTypes = {
 
 function prefix(names) {
   for (var name in names) {
-    console.log(names[name]);
     if (undefined !== _style[name]) {
       return names[name];
     }
@@ -83,7 +82,7 @@ function CSSAnimationEmitter(el) {
 var p = CSSAnimationEmitter.prototype;
 
 p.on = function(type, handler, capture) {
-  capture = capture  || false;
+  capture = capture || false;
   type = getEventType(type);
 
   this._listeners.push({
