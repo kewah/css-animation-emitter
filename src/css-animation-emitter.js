@@ -10,9 +10,9 @@ var animation = prefix({
     i: 'webkitAnimationIteration'
   },
   'MozAnimationName': {
-    s: 'mozanimationstart',
-    e: 'mozanimationend',
-    i: 'mozanimationiteration'
+    s: 'animationstart',
+    e: 'animationend',
+    i: 'animationiteration'
   },
   'OAnimationName': {
     s: 'oAnimationStart',
@@ -20,9 +20,9 @@ var animation = prefix({
     i: 'oAnimationIteration'
   },
   'msAnimationName': {
-    s: 'msanimationstart',
-    e: 'msanimationend',
-    i: 'msanimationiteration'
+    s: 'MSAnimationStart',
+    e: 'MSAnimationEnd',
+    i: 'MSAnimationIteration'
   },
   'animationName': {
     s: 'animationstart',
