@@ -50,6 +50,8 @@ function prefix(names) {
       return names[name];
     }
   }
+
+  return {};
 }
 
 function getEventType(type) {
