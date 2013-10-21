@@ -1,6 +1,6 @@
 {
   "name": "css-animation-emitter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CSS animation/transition events emitter",
   "author": "Antoine Lehurt <keuwah@gmail.com> (http://github.com/kewah)",
   "main": "dist/css-animation-emitter.min.js",

@@ -1,6 +1,6 @@
 /*!
  * css-animation-emitter
- * v0.1.1 - 02/09/2013
+ * v0.1.2 - 21/10/2013
  * http://github.com/kewah/css-animation-emitter
  * (c) Antoine Lehurt (@kewah) - MIT License
  */
@@ -58,6 +58,8 @@ function prefix(names) {
       return names[name];
     }
   }
+
+  return {};
 }
 
 function getEventType(type) {
