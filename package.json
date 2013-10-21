@@ -29,7 +29,7 @@
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-jshint": "~0.6.0",
-    "grunt-component-build": "~0.2.8",
+    "grunt-component-build": "~0.3.x",
     "grunt-mocha-phantomjs": "~0.2.8",
     "matchdep": "~0.1.2",
     "grunt-contrib-watch": "~0.4.4"
